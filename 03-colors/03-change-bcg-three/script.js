@@ -13,4 +13,14 @@
 
     // your code here
 
+    let color;
+
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        color = '#' + Math.floor(Math.random()*16777215).toString(16);
+        document.body.style.backgroundColor = color;
+
+    });
+
 })();

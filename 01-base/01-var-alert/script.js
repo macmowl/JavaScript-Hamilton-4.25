@@ -14,4 +14,7 @@
     alert(whatever);
     // your code here
 
+    let mystring = "Hello, World!";
+    alert(mystring);
+
 })();
