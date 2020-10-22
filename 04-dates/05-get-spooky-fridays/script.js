@@ -12,5 +12,32 @@
 (function() {
 
     // your code here
+    let year;
+    let date = new Date();
+    let month;
+    let monthString = "";
+    let listMonth = "";
+
+    document.getElementById("run").addEventListener("click", function() {
+
+       year = document.getElementById("year").value;
+    
+       for(month = 0;month < 12; month++){
+
+           date.setFullYear(year, month, 13);
+        
+           if(date.getDay() == 5){
+
+               monthString = date.toLocaleString("default", { month: "long" });
+               listMonth = listMonth + " " + monthString;
+
+            }
+            
+       }
+       alert(listMonth);
+       listMonth = "";
+       
+
+    });
 
 })();
