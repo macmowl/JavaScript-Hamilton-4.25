@@ -13,4 +13,17 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
+
+    let keysValuesObj = {};
+   
+    document.getElementById("run").addEventListener("click", function(){
+        
+
+        keys.forEach((key, index) => {
+            keysValuesObj[keys[index]] = values[index];
+        })
+    
+        console.log(keysValuesObj);
+
+    })
 })();

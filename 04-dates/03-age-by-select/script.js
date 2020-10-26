@@ -30,7 +30,7 @@
         birthMonth = document.getElementById("dob-month").value;
         birthYear = document.getElementById("dob-year").value;
 
-        //console.log(birthDay + " " + birthMonth + " " + birthYear);
+        
 
         birthDate.setFullYear(birthYear, (birthMonth - 1), birthDay);
         
@@ -43,9 +43,6 @@
         alert("You are " + age + " years old.");
         
 
-        //console.log(birthDate);
-        //console.log(currentDate);
-        //console.log(age);
 
     });
 

@@ -28,4 +28,18 @@
 
     // your code here
 
+    let indexApple = fruits.indexOf("apple");
+
+    document.getElementById("run").addEventListener("click", function(){
+        
+        if(indexApple != -1){
+            console.log("Yes, there is apple here !");
+        }
+        else{
+            console.log("Nope, no apple to be found");
+        }
+
+    })
+
+
 })();

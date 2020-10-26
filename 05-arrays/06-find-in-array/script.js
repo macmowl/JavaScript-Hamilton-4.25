@@ -91,4 +91,23 @@
 
     // your code here
 
+    let name;
+    let firstName;
+
+    document.getElementById("run").addEventListener("click", function(){
+        
+        people.forEach((element, index) => {
+            
+            name = element["lastname"];
+            firstName = element["firstname"];
+
+            if(name == "Dupont" && firstName == "Jean"){
+                console.log(element["email"]);
+                console.log(index);
+            }
+            
+        });
+
+    })
+
 })();
