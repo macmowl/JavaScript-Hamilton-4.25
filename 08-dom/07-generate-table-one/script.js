@@ -13,4 +13,26 @@
 
     // your code here
 
+    const target = document.getElementById("target");
+
+    let table = document.createElement("table");
+
+    let row;
+    let cell;
+
+    
+
+    for(let i = 0; i < 10 ; i++){
+
+        row = document.createElement("tr");
+        cell = document.createElement("td");
+        row.appendChild(cell);
+
+        table.appendChild(row);
+        
+
+    }
+
+    target.appendChild(table);
+
 })();

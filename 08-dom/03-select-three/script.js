@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    let target = document.getElementsByClassName("target");
+
+    for(i=0;i<target.length;i++){
+    
+        target.item(i).innerText= "Owned !";
+        
+    }  
+
 
 })();
