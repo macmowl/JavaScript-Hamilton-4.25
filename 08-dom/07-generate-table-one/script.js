@@ -26,8 +26,8 @@
 
         row = document.createElement("tr");
         cell = document.createElement("td");
-        row.appendChild(cell);
 
+        row.appendChild(cell);
         table.appendChild(row);
         
 

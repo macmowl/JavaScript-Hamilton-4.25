@@ -13,4 +13,20 @@
 
     // your code here
 
+    let text = document.getElementById("target").innerHTML;
+    document.getElementById("target").innerHTML = "";
+
+    let randomDelay = Math.round(Math.random()*1000);
+
+    function showText(target, message, index, interval) {   
+        if (index < message.length) {
+          document.getElementById(target).append(message[index++]);
+          setTimeout(function () { showText(target, message, index, interval); }, Math.round(Math.random()*1000));
+        }
+      }
+      
+        showText("target", text, 0, randomDelay);   
+      
+
+
 })();
