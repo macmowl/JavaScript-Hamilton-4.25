@@ -13,4 +13,15 @@
 
     // your code here
 
+    let rangeValue;
+    let slider = document.getElementById('slider');
+    let target = document.getElementById('target');
+
+    slider.addEventListener("input", function(){
+        rangeValue = slider.value;
+        console.log(rangeValue);
+
+        target.innerHTML = "0" + rangeValue;
+    })
+
 })();

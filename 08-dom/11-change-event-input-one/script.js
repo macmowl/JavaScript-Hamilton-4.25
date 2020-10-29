@@ -24,7 +24,6 @@
     passwordInput.addEventListener("input", function(){
         
         
-
         password = passwordInput.value;
         passLength = password.length;
 
@@ -35,8 +34,6 @@
             passwordInput.value = passwordInput.value.slice(0, 10);
         }
         
-        
-
         
     })
 

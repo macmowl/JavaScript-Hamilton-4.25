@@ -13,19 +13,42 @@
 
     // your code here
 
-    let text = document.getElementById("target").innerHTML;
+    /*let text = document.getElementById("target").innerHTML;
     document.getElementById("target").innerHTML = "";
 
     let randomDelay = Math.round(Math.random()*1000);
 
-    function showText(target, message, index, interval) {   
+    function showText(target, message, index) {   
         if (index < message.length) {
           document.getElementById(target).append(message[index++]);
-          setTimeout(function () { showText(target, message, index, interval); }, Math.round(Math.random()*1000));
+          setTimeout(function () { showText(target, message, index); }, Math.round(Math.random()*1000));
         }
       }
       
-        showText("target", text, 0, randomDelay);   
+        showText("target", text, 0);*/
+
+    let target = document.getElementById('target');
+    let letters = target.innerHTML.split("");
+    let promise = Promise.resolve();
+    let randomDelay;
+
+    target.innerHTML = "";
+    
+    letters.forEach((letter) => {
+
+      randomDelay = Math.round(Math.random()*250);
+      promise = promise.then(function () {
+
+        target.innerHTML = target.innerHTML + letter;
+
+        return new Promise(function (resolve) {
+          setTimeout(resolve, randomDelay);
+        });
+
+      });
+
+    })
+
       
 
 

@@ -24,7 +24,7 @@
         
         password = passwordInput.value;
         passLength = password.length;
-        passNumbers = password.replace(/[^0-9]/g,"").length
+        passNumbers = password.replace(/[^0-9]/g,"").length;
 
         if(passLength >= 8 && passNumbers >= 2){
             passwordOK.innerHTML = "Ok";
