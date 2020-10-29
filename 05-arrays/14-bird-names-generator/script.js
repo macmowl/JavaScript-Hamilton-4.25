@@ -39,4 +39,28 @@
     ]);
 
     // your code here
+
+    let button = document.getElementById("run");
+    button.addEventListener ("click", function () {
+
+        let randomBirds = Math.floor(Math.random() * birds.length);
+        let randomAdjectives = Math.floor(Math.random() * adjectives.size);
+
+        let birdName = birds[randomBirds].name;
+        let birdFem = birds[randomBirds].fem;
+
+        let adjectivesArray = [...adjectives];
+        let adjective = adjectivesArray[randomAdjectives];
+
+
+
+        if (birdFem == true) {
+            document.getElementById("target").innerHTML = birdName + " " + adjective + "e";
+        }
+        else {
+            document.getElementById("target").innerHTML = birdName + " " + adjective;
+        }
+
+    });
+
 })();
