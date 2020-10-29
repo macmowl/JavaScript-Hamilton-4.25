@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+        let tableau = document.createElement("table");
+        let row, column;
+        // creating all cells
+        for (let i = 0; i < 10; i++) {
+            row = document.createElement("tr");
+            column = document.createElement("td");
+            column.innerText = "okok";
+            row.appenChild(column);
+            tableau.appenChild(row);
+        }
+
+        document.getElementById("target").appendChild(tableau);
 
 })();
