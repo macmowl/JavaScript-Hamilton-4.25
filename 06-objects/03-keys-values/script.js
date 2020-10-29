@@ -19,24 +19,4 @@
         status: "married",
     };
     // your code here
-
-    let properties;
-    let values;
-
-    document.getElementById("run").addEventListener("click", function(){
-        
-        properties = Object.getOwnPropertyNames(person);
-
-        properties.forEach((property) => {
-            console.log(property);
-        })
-
-        values = Object.values(person);
-
-        values.forEach((value) => {
-            console.log(value);
-        })
-        
-
-    })
 })();

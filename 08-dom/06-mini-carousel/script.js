@@ -21,24 +21,4 @@
 
     // your code here
 
-    let i = 1;
-    let imgSource = "";
-    const image = document.getElementsByTagName("img")[0];
-
-    document.getElementById("next").addEventListener("click", function(){
-
-
-        imgSource = gallery[i];
-        image.setAttribute("src", imgSource);
-
-        if(i == 4){
-            i = 0;
-        }
-        else{
-            i++;
-        }
-       
-      
-    })
-
 })();

@@ -11,18 +11,4 @@
 
 (() => {
     // your code here
-
-    const myself = {
-
-        lastName : "Maillard",
-        firstName : "Jonathan",
-        age : 25,
-        city : "Villers-Le-Bouillet",
-        country : "Belgium"
-
-    }
-    
-    document.getElementById("run").addEventListener("click", function(){
-        console.log(myself);
-    })
 })();

@@ -23,21 +23,4 @@
     ]);
 
     // your code here
-
-    let setSize;
-
-    document.getElementById("run").addEventListener("click", function(){
-
-       setSize = people.size;
-       console.log(setSize);
-
-       if(people.has("Alexandre")){
-           console.log("Alexandre is part of the set");
-       }
-       else{
-           console.log("Alexandre is not a part of the set");
-       }
-        
-
-    })
 })();

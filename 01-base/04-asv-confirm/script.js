@@ -12,15 +12,5 @@
 (function() {
 
     // your code here
-    let age = prompt("What is your age ?");
-    let gender = prompt("What is your gender ?");
-    let town = prompt("In which town do you live ?");
-
-    if(confirm("Are these informations correct ? Age = " + age + " Gender = " + gender + " Town = " +town)){
-        console.log("ok");
-    }
-    else{
-        document.location.reload();
-    }
 
 })();

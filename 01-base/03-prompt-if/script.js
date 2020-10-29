@@ -12,15 +12,5 @@
 (function() {
 
   // your code here
-  let question = prompt("Do you want some cake ?");
-
-  if(question == "yes" || question == "Yes"){
-    alert("Congratulations ! But there is no more left, sorry.");
-    console.log(question);
-  }
-  else{
-    alert("WHY DON'T YOU WANT TO EAT MY CAKE ???");
-    console.log(question);
-  }
 
 })();

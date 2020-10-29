@@ -13,28 +13,4 @@
 
     // your code here
 
-    let passLength;
-    let password;
-
-    let passwordInput = document.getElementById("pass-one");
-    let passwordCount = document.getElementById("counter");
-
-    
-
-    passwordInput.addEventListener("input", function(){
-        
-        
-        password = passwordInput.value;
-        passLength = password.length;
-
-        if(passLength <= 10){
-            passwordCount.innerHTML = passLength + "/10";
-        }
-        else{
-            passwordInput.value = passwordInput.value.slice(0, 10);
-        }
-        
-        
-    })
-
 })();

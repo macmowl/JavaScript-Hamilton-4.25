@@ -15,19 +15,6 @@
 
         // your code here
 
-        let numbers = '';
-        let i = 1;
-
-        while(i*i < 21){
-            numbers = numbers + (i*i) + ' ';
-            i++;
-            
-        }
-
-        alert(numbers);
-
-        
-
     });
 
 })();

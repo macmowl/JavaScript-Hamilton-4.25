@@ -13,29 +13,4 @@
 
     // your code here
 
-    let target = document.getElementById('target');
-    let letters = target.innerHTML.split("");
-    let randomDelay;
-    let index = 0;
-
-    target.innerHTML = "";
-    
-
-    for (let i = 0; i < letters.length; i++) {
-
-      randomDelay = Math.floor(Math.random()*250 + 50);
-
-      setTimeout(()=>{
-
-        target.innerHTML = target.innerHTML + letters[index];
-
-        index++;
-
-      },i*randomDelay);
-
-    }
-
-      
-
-
 })();

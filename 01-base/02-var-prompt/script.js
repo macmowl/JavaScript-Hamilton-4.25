@@ -12,8 +12,5 @@
 (function() {
 
     // your code here
-    let name = prompt("Entrez votre nom");
-
-    alert("Hello, " + name + " !");
 
 })();

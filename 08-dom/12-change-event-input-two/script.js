@@ -13,30 +13,4 @@
 
     // your code here
 
-    let passLength;
-    let password;
-    let passNumbers;
-
-    let passwordInput = document.getElementById("pass-one");
-    let passwordOK = document.getElementById("validity");
-
-    passwordInput.addEventListener("input", function(){
-        
-        password = passwordInput.value;
-        passLength = password.length;
-        passNumbers = password.replace(/[^0-9]/g,"").length;
-
-        if(passLength >= 8 && passNumbers >= 2){
-            passwordOK.innerHTML = "Ok";
-        }
-        else{
-            passwordOK.innerHTML = "Not ok";
-        }
-        
-        
-        
-
-        
-    })
-
 })();

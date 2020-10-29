@@ -30,14 +30,4 @@
 
     // your code here
 
-    let fruitsFiltered = [];
-
-    document.getElementById("run").addEventListener("click", function(){
-
-        fruitsFiltered = fruits.filter((v, i) => fruits.indexOf(v) === i);
-
-        console.log(fruitsFiltered);
-        
-
-    })
 })();

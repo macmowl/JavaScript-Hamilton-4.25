@@ -39,44 +39,4 @@
     ]);
 
     // your code here
-
-    let birdName;
-    let birdAdjective;
-    let birdFull;
-    
-    let adjectivesArray = Array.from(adjectives);
-
-    let randomIndex = 0;
-    let randomAdjective = 0;
-
-    document.getElementById("run").addEventListener("click", function(){
-
-        randomIndex = Math.round(Math.random()*11);
-        randomAdjective = Math.round(Math.random()*10);
-
-        birdName = birds[randomIndex].name;
-        birdAdjective = adjectivesArray[randomAdjective];
-
-
-        if(birds[randomIndex].fem){
-
-            birdFull = "La " + birdName + " " + birdAdjective + "e";
-            
-
-        }else{
-
-            birdFull = "Le " + birdName + " " + birdAdjective;
-
-        }
-
-        document.getElementById('target').innerHTML = birdFull;
-    
-     })
-    
-    
-    
-    
-
-
-
 })();

@@ -16,41 +16,4 @@
         }
     }
     // your code here
-
-    class Dog extends Animal {
-        constructor(name){
-            super();
-            this.name = name;
-        }
-
-        static greeting = "Waf";
-        
-    }
-
-    class Cat extends Animal {
-        constructor(name){
-            super();
-            this.name = name;
-        }
-
-        static greeting = "Meow";
-        
-    }
-
-    document.getElementById("run").addEventListener("click", function(){
-        
-        const Dogy = new Dog("Dogy");
-        const Felix = new Cat("Felix");
-
-        console.log(Dogy.sayHello());
-        console.log(Felix.sayHello());
-      
-    })
-
-
-
-
-
-    
-
 })();

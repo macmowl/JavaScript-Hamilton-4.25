@@ -14,49 +14,6 @@
 
     const performOperation = operation => {
         // perform the operation
-        
-        
-        let firstOp;
-        let secondOp;
-        let result;
-
-
-        switch(operation){
-            case 'addition':
-                firstOp = document.getElementById("op-one").value;
-                secondOp = document.getElementById("op-two").value;
-
-                result = Number(firstOp) + Number(secondOp);
-
-                alert(result);
-                break;
-            case 'substraction':
-                firstOp = document.getElementById("op-one").value;
-                secondOp = document.getElementById("op-two").value;
-
-                result = Number(firstOp) - Number(secondOp);
-
-                alert(result);
-                break;
-            case 'multiplication':
-                firstOp = document.getElementById("op-one").value;
-                secondOp = document.getElementById("op-two").value;
-
-                result = Number(firstOp) * Number(secondOp);
-
-                alert(result);
-                break;
-            case 'division':
-                firstOp = document.getElementById("op-one").value;
-                secondOp = document.getElementById("op-two").value;
-
-                result = Number(firstOp) / Number(secondOp);
-
-                alert(result);
-                break;
-            default:
-                alert("error");
-        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>

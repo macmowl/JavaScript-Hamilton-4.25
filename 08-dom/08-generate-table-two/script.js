@@ -12,29 +12,5 @@
 (function() {
 
     // your code here
-    const target = document.getElementById("target");
-
-    let table = document.createElement("table");
-
-    let row;
-    let cell;
-
-
-    for(let i = 1; i <= 10 ; i++){
-
-        row = document.createElement("tr");
-
-        for(let v = 1; v <= 10; v++){
-            cell = document.createElement("td");
-            cell.innerHTML = (i * v);
-
-            row.appendChild(cell);
-        }
-        
-        table.appendChild(row);
-
-    }
-
-    target.appendChild(table);
 
 })();
