@@ -13,4 +13,22 @@
 
     // your code here
 
+    let password1;
+    let password2;
+
+    //Listen click on button run
+    document.getElementById("run").addEventListener("click", function(){
+
+        //Get the passwords value in their input
+        password1 = document.getElementById("pass-one").value;
+        password2 = document.getElementById("pass-two").value;
+
+        //Verify if the password are different and add class error to their element if they are not
+        if(password1 != password2){
+            document.getElementById("pass-one").classList.add("error");
+            document.getElementById("pass-two").classList.add("error");
+        }
+      
+    })
+
 })();
