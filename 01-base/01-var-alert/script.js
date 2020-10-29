@@ -11,8 +11,8 @@
 
 (function() {
 
-    const msg = "Hello, World!";
+    const message = "Hello, World!";
 
-    alert(msg);
+    alert(message);
 
 })();
