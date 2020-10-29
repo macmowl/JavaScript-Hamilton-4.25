@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    const parts = [
+        document.getElementById("part-one"),
+        document.getElementById("part-two"),
+        document.getElementById("part-three"),
+        document.getElementById("part-four")
+    ];
+
+    parts.forEach( (x,i) => x.addEventListener("click", () => {
+        x.innerText===x.getAttribute("data-max") ? x.innerText = x.getAttribute("data-min") : ++x.innerText ;
+        x.innerText = i ? ("0"+x.innerText).slice(-2) : ("0"+x.innerText).slice(-3);
+        updateDisplay();
+    }));
+
+    function updateDisplay(){
+        document.getElementById("target").innerText = `+${parts[0].innerText}${parts[1].innerText}${parts[2].innerText}${parts[3].innerText}`;
+    }
 
 })();
