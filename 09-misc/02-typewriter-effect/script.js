@@ -13,41 +13,27 @@
 
     // your code here
 
-    /*let text = document.getElementById("target").innerHTML;
-    document.getElementById("target").innerHTML = "";
-
-    let randomDelay = Math.round(Math.random()*1000);
-
-    function showText(target, message, index) {   
-        if (index < message.length) {
-          document.getElementById(target).append(message[index++]);
-          setTimeout(function () { showText(target, message, index); }, Math.round(Math.random()*1000));
-        }
-      }
-      
-        showText("target", text, 0);*/
-
     let target = document.getElementById('target');
     let letters = target.innerHTML.split("");
-    let promise = Promise.resolve();
     let randomDelay;
+    let index = 0;
 
     target.innerHTML = "";
     
-    letters.forEach((letter) => {
 
-      randomDelay = Math.round(Math.random()*250);
-      promise = promise.then(function () {
+    for (let i = 0; i < letters.length; i++) {
 
-        target.innerHTML = target.innerHTML + letter;
+      randomDelay = Math.floor(Math.random()*250 + 50);
 
-        return new Promise(function (resolve) {
-          setTimeout(resolve, randomDelay);
-        });
+      setTimeout(()=>{
 
-      });
+        target.innerHTML = target.innerHTML + letters[index];
 
-    })
+        index++;
+
+      },i*randomDelay);
+
+    }
 
       
 

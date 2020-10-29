@@ -13,4 +13,28 @@
 
     // your code here
 
+    const randomNumber = Math.floor((Math.random())*100 + 1);
+    console.log(randomNumber);
+
+    let numberFound = false;
+    let numberGiven;
+    let counter = 0;
+
+    while(numberFound != true){
+        numberGiven = prompt("Guess a number between 1 and 100");
+        counter++;
+
+        if(numberGiven == randomNumber){
+            numberFound = true;
+        }
+        if(numberGiven < randomNumber){
+            alert("Higher !");
+        }
+        if(numberGiven > randomNumber){
+            alert("Lower !");
+        }
+    }
+
+    alert("That's it ! You found the answer in " + counter + " guesses");
+
 })();
