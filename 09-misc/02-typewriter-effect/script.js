@@ -13,4 +13,27 @@
 
     // your code here
 
+
+    
+    let target = document.getElementById("target");
+    let text = target.innerText;
+    target.innerHTML = '';
+    console.log(text)
+    let i = 0;
+    let speed = 50;
+    
+function typeWriter() {
+    if (i < text.length) {
+      target.innerHTML += text.charAt(i);
+      console.log(text.charAt(i))
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+
+
+    typeWriter();
+
 })();
+

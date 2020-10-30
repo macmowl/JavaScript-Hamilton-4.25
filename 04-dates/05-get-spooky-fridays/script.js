@@ -13,4 +13,25 @@
 
     // your code here
 
+  
+
+    document.getElementById("run").addEventListener("click", function () {
+        let sel_year = document.getElementById("year").value;
+        
+        let d = new Date();
+        d.setDate(13);
+        d.setMonth(0);
+        d.setFullYear(sel_year)
+        alert("year tested :"+d);
+        
+        for ( d.setMonth=0; d.setMonth<12; d.setMonth++ ) {
+            alert("checked date :"+d);
+            if (d.getDay = 5)s
+            { alert(d.getDay)}
+
+        }
+
+    })
+
+
 })();
