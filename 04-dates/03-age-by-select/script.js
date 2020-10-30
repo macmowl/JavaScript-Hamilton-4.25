@@ -27,26 +27,26 @@
         /*alert("DoB :"+ bday +"/"+ bmonth +"/"+ byear); */
 
         let older = cyear-byear;
-        alert("You have +- "+older+" years old")
+     //   alert("You have +- "+older+" years old")
 
         if (bmonth > cmonth) {
             alert("You have "+older+" years old");
         }
         else if (bmonth < cmonth)
         {
-            older = older-1;
+            older == older-1;
             alert("You have "+older+" years old");
         }
-        else if (bmonth = cmonth && bday > cday)
+        else if (bmonth == cmonth && bday > cday)
         {
             older = older-1;
             alert("You have "+older+" years old");
         }
-        else if (bmonth = cmonth && bday < cday)
+        else if (bmonth == cmonth && bday < cday)
         {
             alert("You have "+older+" years old");
         }
-        else if (bmonth = cmonth && bday == cday);
+        else if (bmonth == cmonth && bday == cday);
         {
             alert("You have "+older+" years old, Happy B-Day");
         }
