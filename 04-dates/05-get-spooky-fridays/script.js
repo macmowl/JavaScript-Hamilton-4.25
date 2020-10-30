@@ -16,22 +16,44 @@
   
 
     document.getElementById("run").addEventListener("click", function () {
+
+
         let sel_year = document.getElementById("year").value;
+
+
+        function numberOfFridaythe13thsIn(jahr) {
+            var count = 0;
+            for (var month=0; month<12; month++) {
+                var d = new Date(jahr,month,13);
+                if(d.getDay() == 5){
+                    console.log(d)
+                  count++;
+               }
+            }
+            return count;                            
+        }
         
+        console.log(numberOfFridaythe13thsIn(sel_year));
+        
+
+/*
         let d = new Date();
         d.setDate(13);
         d.setMonth(0);
         d.setFullYear(sel_year)
-        alert("year tested :"+d);
+        d = d.addMonths(1)
+        console.log("year tested :"+d);
         
-        for ( d.setMonth=0; d.setMonth<12; d.setMonth++ ) {
-            alert("checked date :"+d);
-            if (d.getDay = 5)s
-            { alert(d.getDay)}
+        for ( d.setMonth=0; d.setMonth<12; d.addMonths(1) ) {
+            console.log("checked date :"+d);
+            if (d.getDay = 5)
+            { console.log(d.getDay)}
 
         }
+*/
 
     })
 
-
 })();
+
+
