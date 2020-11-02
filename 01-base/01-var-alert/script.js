@@ -10,11 +10,9 @@
 // You will have time to focus on it later.
 
 (function() {
-    let whatever = "hello world!!!";
-    alert(whatever);
-    // your code here
+
+    const message = "Hello, World!";
+
+    alert(message);
 
 })();
-
-let my_name = "cedric";
-alert(my_name);

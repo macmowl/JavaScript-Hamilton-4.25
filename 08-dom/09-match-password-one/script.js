@@ -12,26 +12,5 @@
 (function() {
 
     // your code here
-    document.getElementById("run").addEventListener("click", function () { 
-        
-        let pass1 = document.getElementById("pass-one").value;
-        let pass2 = document.getElementById("pass-two").value;
-        console.log(pass1, pass2);
-
-        if (pass1 === pass2) {
-            console.log('passwords entered in the input fields are exactly the same');
-            document.getElementById("pass-two").style.borderColor = "green";
-            }
-        else {
-            console.log('passwords entered in the input are NOT the same');
-            document.getElementById("pass-two").style.borderColor = "red";
-        }
-                
-            
-        
-
-
-
-    })
 
 })();

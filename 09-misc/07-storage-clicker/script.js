@@ -13,27 +13,4 @@
 
     // your code here
 
-    // Store
-    
-    // Retrieve
-    
-    let tvalue = localStorage.getItem("count");
-    console.log(tvalue)
-
-    let target = document.getElementById("target")
-    /* tvalue = document.getElementById("target").innerText */
-    let button = document.getElementById("increment")
-
-
-    button.addEventListener("click", function(){
-        tvalue++
-        console.log(tvalue)
-        target.innerText = tvalue
-        localStorage.setItem("count", tvalue);
-
-    }
-)
-
-
-
 })();

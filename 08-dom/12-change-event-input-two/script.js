@@ -12,6 +12,7 @@
 (function() {
 
     // your code here
+
 /*
     let mypwd 
 
@@ -62,5 +63,6 @@ myInput.onkeyup = function() {
             valide.innerHTML = 'Not ok';
         }
     }
+
 
 })();

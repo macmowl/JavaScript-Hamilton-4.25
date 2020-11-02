@@ -28,21 +28,4 @@
 
     // your code here
 
-
-        
-    
-    document.getElementById("run").addEventListener("click", function () {
-        
-
-        let check = fruits.includes('apple');
-
-        if (check == true) {
-            console.log('yes')
-        }
-        else {console.log('No')}
-
-       
-        
-            })
-
 })();
