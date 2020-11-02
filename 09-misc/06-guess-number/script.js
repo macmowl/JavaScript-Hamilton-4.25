@@ -13,34 +13,4 @@
 
     // your code here
 
-    var y = Math.floor(Math.random() * 100 + 1); 
-      console.log("cheat sol "+y)
-    
-    var guess = 1; 
-    
-      
- function letsgo (){ 
-   // number guessed by user      
-   var x = prompt("Please type a number (try: "+guess+")", x);
-  
-   if(x == y) 
-   {     
-       alert("that's it! - you have do "
-               + guess + " try "); 
-   } 
-   else if(x > y) 
-   {     
-       guess++; 
-       alert("lower"); 
-       letsgo()
-   } 
-   else
-   { 
-       guess++; 
-       alert("higher") 
-       letsgo()
-   } 
-} 
-letsgo()
-
 })();

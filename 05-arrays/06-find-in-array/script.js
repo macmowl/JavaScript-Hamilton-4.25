@@ -91,30 +91,4 @@
 
     // your code here
 
-    document.getElementById("run").addEventListener("click", function () {
-        
-/*
-        users= people.filter(function(item) {
-            for (var key in filter) {
-              if (people[lastname] === 'Dupont'  || people[firstname] === 'Jean')
-                return false;
-            }
-            return true;
-          });
-          console.log(users) */
-
-        /*let index  = people.findIndex ( ({ lastname }) => lastname === 'Dupont' && firstname == 'jean') */
-        
-        /* (people => people.lastname == 'Dupont' && people.firstname == 'Dupont') */
-          /*&&  ({ firstname }) => firstname === 'Jean' ); */
-
-        let index  = people.findIndex (people => people.lastname == 'Dupont' ||  people.firstname == 'jean') 
-
-        console.log(index); 
-        console.log(people[index]["email"]); 
-
-
-
-    })
-
 })();

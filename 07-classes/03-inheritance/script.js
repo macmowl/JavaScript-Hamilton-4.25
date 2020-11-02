@@ -16,15 +16,4 @@
         }
     }
     // your code here
-
-    document.getElementById("run").addEventListener("click", function () { 
-
-
-        const dog = new Animal();
-        const cat = new Animal();
-
-        console.log(dog)
-     })
-
-
 })();

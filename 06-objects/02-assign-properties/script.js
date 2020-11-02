@@ -27,47 +27,4 @@
         user: null,
     };
     // your code here
-
-    document.getElementById("run").addEventListener("click", function () {
-
-    itemnum =   computers.length;
-    console.log(itemnum);
-
-        for (let i = 0; i < itemnum; i++) {
-            //console.log("work on computers["+i+"] ");
-            //console.table(computers[i]); 
-            //console.log('ready to check');
-            //console.log(defaultProps.available);
-            //console.log(computers[0].available);
-
-            if ( computers[i].available == undefined) 
-            {
-                computers[i].available = defaultProps.available
-                //console.table(computers[i])
-            }
-
-            if ( computers[i].os == undefined) 
-            {
-                computers[i].os = defaultProps.os
-                //console.table(computers[i])
-            }
-
-            if ( computers[i].user == undefined) 
-            {
-                computers[i].user = defaultProps.user
-                //console.table(computers[i])
-            }
-
-            
-          }
-
-
-
- 
-        console.table(computers);
-  
-    
-    })
-
-
 })();

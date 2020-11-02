@@ -12,54 +12,5 @@
 (function() {
 
     // your code here
-/*
-    let mypwd 
-
-    var myInput = document.getElementById("psw");
-
-    document.getElementById(pass-one).addEventListener("onkeypress",
-    mypwd =  document.getElementById(pass-one),
-    console.log(mypwd.lenght)
-    )
-    
-    mypwd.onkeyup = function() {
-        document.getElementById("validity").node.innerText = '1234';
-      }
-*/
-
-let valide = document.getElementById("validity");
-let myInput = document.getElementById("pass-one");
-
-
-myInput.onkeyup = function() { 
-
-    let checklong = 0
-    let check2num = 0
-
-    let onlyDigits = myInput.value.replace(/[^0-9 ]/g, "");
-
-        if( onlyDigits.length >= 2 ) {
-            check2num = 1;
-        } 
-        else {
-            check2num = 0;
-        }
-
-
-        if(myInput.value.length >= 8) {
-            checklong = 1;
-
-        } else {
-            checklong = 0;
-        }
-
-
-        if (checklong == 1 && check2num == 1) {
-            valide.innerHTML = 'OK';
-        }
-        else {
-            valide.innerHTML = 'Not ok';
-        }
-    }
 
 })();

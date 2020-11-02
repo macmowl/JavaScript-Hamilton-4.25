@@ -12,14 +12,5 @@
 (function() {
 
     // your code here
-    let myInput = document.getElementById("pass-one");
-    let counter = document.getElementById("counter");
-
-    myInput.onkeyup = function() { 
-        document.getElementById("pass-one").setAttribute("maxlength", "10"); 
-        counter.innerHTML = (myInput.value.length+'/10');
-    }
-   
-   
 
 })();

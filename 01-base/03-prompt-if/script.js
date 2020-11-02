@@ -12,29 +12,5 @@
 (function() {
 
   // your code here
-  /*var ans = window.prompt("Do You Want a Cake ?");
-  if (ans = "yes") {
-  alert("congratulate, The cake is a lie...");
-  else {alert("More cake for me then :p !");}
-  }
-
-
-
-if (a > 0) {
-  result = 'positive';
-} else {
-  result = 'NOT positive';
-}
-*/
 
 })();
-
-
-var answ = prompt("Do You Want a Cake ?");
-
-if (answ == "yes") {
-alert("congratulate, but ... The cake is a lie..." );
-} else {
-  alert("More cake for me then :p !");
-};
-
