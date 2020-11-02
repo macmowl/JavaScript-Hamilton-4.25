@@ -39,33 +39,4 @@
     ]);
 
     // your code here
-
-    document.getElementById("run").addEventListener("click", function () {
-
-
-        let cbird   = birds.length;
-        let cadj    = adjectives.size ;
-        let adj
-
-        
-        let randbird = Math.floor(Math.random() * cbird);
-        let randadj = Math.floor(Math.random() * cadj);
-
-
-        Set.prototype.getByIndex = function(index) { return [...this][index]; } 
-        let selecadj = adjectives.getByIndex(randadj);
-        
-        if ( birds[randbird].fem == undefined) 
-            { adj = "";
-              deter = "Le ";}
-            else
-            { adj = "e";
-            deter = "La ";}
-            
-
-        document.getElementById("target").innerHTML = deter+birds[randbird].name+" "+selecadj+adj;
-    
-
-    })
-    
 })();

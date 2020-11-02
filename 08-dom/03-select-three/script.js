@@ -11,9 +11,6 @@
 
 (function() {
 
-
-    document.querySelectorAll(".target").forEach(x => x.innerText = "owned");
-      // var elem = document.getElementById('material');
-      //elem.querySelectorAll("#target").innerHTML = "owned";
+    // your code here
 
 })();
