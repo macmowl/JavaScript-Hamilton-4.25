@@ -27,6 +27,7 @@
       }
 */
 
+
 let valide = document.getElementById("validity");
 let myInput = document.getElementById("pass-one");
 
