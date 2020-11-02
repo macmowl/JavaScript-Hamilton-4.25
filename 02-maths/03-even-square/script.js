@@ -14,6 +14,14 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        var number=2
+        
+        while (number <= 21) {
+            result = Math.pow(number, 2);
+            document.write('Square of '+number+' : '+result);
+            document.write('<br/>');
+            number += + 2;
+            }
 
     });
 

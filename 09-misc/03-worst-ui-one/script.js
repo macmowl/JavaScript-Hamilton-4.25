@@ -13,4 +13,14 @@
 
     // your code here
 
+var slider = document.getElementById("slider");
+var target = document.getElementById("target");
+console.log(slider.value)
+/*target.innerHTML = slider.value; */
+target.innerHTML = "0"+slider.value;
+
+slider.oninput = function() {
+    target.innerHTML = "0"+this.value;
+}
+
 })();

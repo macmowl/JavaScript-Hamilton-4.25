@@ -28,4 +28,17 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function () {
+        console.log(fruits[3])
+
+/*
+        for ( aid=0; aid<4; aid++ ) {
+        console.log(fruits[aid]);
+
+        }
+*/
+    })
+
+
+
 })();

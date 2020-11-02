@@ -26,4 +26,18 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function () {
+        fruits.shift();
+        fruits.pop();
+
+        let newFirstElement = "banana";
+        /* let newLastElement = "kiwi"; */
+        fruits = [newFirstElement].concat(fruits);
+        fruits.push("Kiwi");
+        
+        
+        
+        console.log(fruits)
+    })
+
 })();
