@@ -15,20 +15,4 @@
 
     // your code here
 
-    let ftime = new Date();
-    let hours = ftime.getHours();
-    hours = hours*100;
-    let minu = ftime.getMinutes();
-
-    let hr_min = hours+minu;
-    if (hr_min < 1730)
-    {
-        document.getElementById("target").innerHTML = "Hello";
-    }
-    else 
-    {
-        document.getElementById("target").innerHTML = "Good evening";
-    }
-
-
 })();

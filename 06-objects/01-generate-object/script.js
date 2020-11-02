@@ -11,19 +11,4 @@
 
 (() => {
     // your code here
-
-    document.getElementById("run").addEventListener("click", function () {
-
-
-
-        var objet_cont = {lastname:"AUDRIT", firstname:"Cedric", age:"20", city:"Liège", country:"BE"};
-        console.log(objet_cont);
-    
-    
-    })
-
-
-
-
-
 })();

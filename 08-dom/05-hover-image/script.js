@@ -13,24 +13,4 @@
 
     // your code here
 
-    var x = document.getElementsByTagName("IMG")[0].getAttribute("src"); 
-    var y = document.getElementsByTagName("IMG")[0].getAttribute("data-hover"); 
-    //console.log(x);
-
-    document.getElementsByTagName("img")[0].addEventListener("mouseover", () => {
-        document.getElementsByTagName("img")[0].src = y;
-    });
-    document.getElementsByTagName("img")[0].addEventListener("mouseout", () => {
-        document.getElementsByTagName("img")[0].src = x;
-    });
-
-    //console.log(img2);
-
-    //const himage = document.getElementsByTagName("IMG");
-    //console.log(himage)
-  //  himage.src = document.getElementsByTagName("IMG").getAttribute("data-hover");
-//    [0].currentSrc
-    //document.getElementById("target").appendChild(himage);
-    //document.getElementById("source").remove();
-
 })();

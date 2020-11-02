@@ -16,16 +16,7 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-        let num = document.getElementById("numbers").value.split(",");
-        num.sort((a,b) => a - b);
-        alert(num);
-/*        var num
-        num = Array.from(document.querySelectorAll(input.numbers).value);
 
-
-        num.sort();
-        alert(num);
-*/
     });
 
 })();

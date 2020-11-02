@@ -28,21 +28,4 @@
 
     // your code here
 
-    document.getElementById("run").addEventListener("click", function () {
-        let arlong = fruits.length ;
-        
-
-
-
-        for ( aid=0; aid<arlong; aid++ ) {
-            console.log(fruits[aid]);
-    
-            }
-        
-        
-
-    })
-
-
-    
 })();
