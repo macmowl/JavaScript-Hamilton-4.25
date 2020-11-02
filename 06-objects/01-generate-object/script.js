@@ -9,22 +9,21 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+(() => {
+    // your code here
 
-(function() {
-    const Camelia = [
-        {
-            lastname: "Jarek",
-            firstname: "Camélia",
-            age: "25",
-            city: "Liège",
-            country: "Belgium",
-        }
-    ];
-    document.getElementById("run").addEventListener("click", function() {
-        
-        Camelia.forEach(function (item) {
-            console.log(item);
-        });
+    document.getElementById("run").addEventListener("click", function () {
 
-    });
 
+
+        var objet_cont = {lastname:"AUDRIT", firstname:"Cedric", age:"20", city:"Liège", country:"BE"};
+        console.log(objet_cont);
+    
+    
+    })
+
+
+
+
+
+})();
