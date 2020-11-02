@@ -9,8 +9,45 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
+
+
+
+
+    document.getElementById("run").addEventListener("click", function () {
+
+        let randnum = []
+        let tennum = []
+
+        for (i = 0; i < 10; i++) {
+            randnum = Math.floor(Math.random() * 100);
+            tennum.push(randnum);
+            document.getElementById(`n-${i+1}`).innerHTML = randnum;
+        }
+        console.log(tennum); /* juste for check */
+
+        order = tennum.sort();
+
+        let smallest = order[0]
+        let biggest = order[9]
+        let sum = tennum.reduce((a, b) => {
+            return a + b;
+        });
+        let average = sum/10;
+
+/*
+        console.log(order[0])
+        console.log(order[9])
+        console.log(sum)
+        console.log(average) */
+
+        document.getElementById("min").innerHTML = order[0];
+        document.getElementById("max").innerHTML = order[9];
+        document.getElementById("sum").innerHTML = sum;
+        document.getElementById("average").innerHTML = average;
+
+    })
 
 })();

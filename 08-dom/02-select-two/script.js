@@ -12,5 +12,5 @@
 (function() {
 
     // your code here
-
+    document.getElementsByTagName("P")[1].innerHTML = "owned";
 })();
