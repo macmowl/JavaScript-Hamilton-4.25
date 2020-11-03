@@ -25,7 +25,14 @@
         "grap",
         "cherry",
     ];
-
     // your code here
+    document.getElementById("run").addEventListener ("click", function() {
+
+        for(let produits of fruits){ //produit peut s'appeler de façon différente, par ex value
+
+            console.log(produits); //renvoie le nom de la valeur en cours à chaque boucle quand on actionne le bouton
+        }
+
+    });
 
 })();
