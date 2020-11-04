@@ -12,5 +12,12 @@
 (function() {
 
     // your code here
+  let target = document.querySelector('#target');
+  let slider = document.querySelector('#slider');
+
+    slider.addEventListener('input', ()=>{
+        
+      target.innerHTML = "0"+slider.value;
+    })
 
 })();
