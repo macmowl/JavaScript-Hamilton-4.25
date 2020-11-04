@@ -25,5 +25,18 @@
     ];
 
     // your code here
+    let button = document.getElementById('run');
 
+    button.addEventListener('click',() => {
+
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift('Bannana');
+        fruits.push('Kiwi');
+
+        alert(fruits);
+
+    })
+    
+ 
 })();
