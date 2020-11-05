@@ -13,10 +13,22 @@
     
     // to get the value of an input: document.getElementById("element-id").value
 
-    document.getElementById("run").addEventListener("click", function() {
+document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        let num = document.getElementById("number").value;
+        /*alert(num);   Just for test getlement*/
 
+        factorialize(num);
+ 
     });
 
 })();
+
+function factorialize(num) {
+    //   return 1;
+    // for -boucle 
+    for (var i = num - 1; i >= 1; i--) {
+      num *= i;
+    }
+    alert(num);
+  }
