@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
+    let counter = 0;
+    let stockage = localStorage;
+
+    //On page load, check if value storage
+    window.addEventListener( 'load', () => {
+        if ( stockage.length != 0) {
+            counter = stockage.getItem('value');
+            document.getElementById('target').innerHTML = counter;
+        } else {
+            counter = 0;
+        }
+    })
+    
+    
+    // on increment button click, add 1
+    document.getElementById('increment').addEventListener( 'click', () => {
+        counter++;
+        stockage.setItem('value', counter);
+        console.log(counter);
+        document.getElementById('target').innerHTML = counter;
+    })
 
 })();
