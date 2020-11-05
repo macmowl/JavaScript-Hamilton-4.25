@@ -11,6 +11,15 @@
 
 (function() {
 
-    // your code here
+    document.getElementById('run').addEventListener( 'click', () => {
+        let now = new Date();
+        let inputDate = new Date(`
+            ${document.getElementById('dob-month').value},
+            ${document.getElementById('dob-day').value},
+            ${document.getElementById('dob-year').value}
+        `);
+        let birthday = Math.floor((now - inputDate) / 365 / 24 / 3600 / 1000) ;
+        alert(`You have ${birthday} years old.`);
+    })
 
 })();
