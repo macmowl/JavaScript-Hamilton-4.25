@@ -11,6 +11,8 @@
 
 (function() {
 
-    // your code here
+    const name = window.prompt("What's your name?");
+
+    window.alert(`Hello, ${name}!`);
 
 })();
