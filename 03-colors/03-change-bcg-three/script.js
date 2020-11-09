@@ -6,23 +6,17 @@
  * started at 26/10/2018
  */
 
-// NOTE: don't focus on the existing code structure for now.
-// You will have time to focus on it later.
+function getRandomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 (function() {
-
-      document.getElementById("run").addEventListener("click", function() {
-        
-        function getRandomColor() {
-            let letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-              color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-        document.body.style.background = getRandomColor();
-
+    document.getElementById("run").addEventListener("click", function() {
+        document.querySelector("html").style.backgroundColor = getRandomColor();
     });
-
 })();
