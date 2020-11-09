@@ -10,7 +10,11 @@
 // You will have time to focus on it later.
 
 (function() {
+    const wantsCake = confirm("Want cake?");
 
-  // your code here
-
+    alert(
+        wantsCake
+            ? "Congrats! Here's your virtual cake!"
+            : "More cake for me then :p !",
+    );
 })();
