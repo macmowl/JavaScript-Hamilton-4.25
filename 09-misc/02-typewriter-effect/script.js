@@ -11,6 +11,34 @@
 
 (function() {
 
-    // your code here
+ let i = 0
+
+
+ let speed = 50;
+
+ let txt = document.getElementById("target").value.length;
+
+
+
+ function typeWriter() {
+
+    
+    if (i < txt){
+
+        
+        document.getElementById("target").innerHTML+=txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+
+        
+    }
+ } 
+
+ document.getElementById("target").innerHTML=" "
+
+typeWriter()
+
+ 
+
 
 })();
