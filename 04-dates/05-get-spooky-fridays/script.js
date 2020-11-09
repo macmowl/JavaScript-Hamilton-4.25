@@ -9,29 +9,40 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+function friday13th(year) {
+    let monthsArray = [
+        "january",
+        "february",
+        "march",
+        "april",
+        "may",
+        "juny",
+        "july",
+        "augustus",
+        "september",
+        "october",
+        "november",
+        "december",
+    ];
 
-    // your code here
+    let results = [];
 
-    function friday13th(year) {
-        
-        let count = 0;
+    for (let month = 0; month < 12; month++) {
+        let day = new Date(year, month, 13);
 
-        for (let month = 0; month < 12; month++) {
-
-            let day = new Date(year, month, 13);
-            
-            if (day.getDay() == 5) count++;             
+        if (day.getDay() === 5) {
+            results.push(monthsArray[month]);
         }
-        
-        return count;                            
     }
 
-    document.getElementById("run").addEventListener("click", ()=>{
+    return results;
+}
 
+(function() {
+    document.getElementById("run").addEventListener("click", () => {
         let year = document.getElementById("year").value;
 
-        console.log(year);        
+        console.log(year);
         console.log(friday13th(year));
-    })
+    });
 })();
