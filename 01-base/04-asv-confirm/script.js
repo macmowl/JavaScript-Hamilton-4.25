@@ -10,19 +10,14 @@
 // You will have time to focus on it later.
 
 (function collectDatas() {
-    
-    let age=prompt("Enter your age");
-    let gender=prompt("Enter your gender");
-    let adress=prompt("Enter your locality");
-    let phrase=`Your are ${age} years old ${gender} and you live in ${adress}`;
-    let allRight = confirm(phrase);
-    console.log(allRight)
+    let age = prompt("Enter your age");
+    let gender = prompt("Enter your gender");
+    let address = prompt("Enter your locality");
+    let allRight = confirm( `You are ${age} years old ${gender} and you live in ${address}`);
 
-    if ( allRight === true) {
-    alert("Thanks for your participation");
-    }else{
-    collectDatas();
+    if (allRight) {
+        alert("Thanks for your participation");
+    } else {
+        collectDatas();
     }
-    
-
 })();
