@@ -16,7 +16,7 @@
 
     for(let n=1 ; n<= 100 ; n++) // pour une valeur numérique n plus petite ou égale à 100 (en commençant par 1),...
     {
-        if (n % 15 == 0) { // SI la valeur de n est divisible par 15 sans avoir de reste (reste = 0)... (NOTE quelle formule correcte pour noter n % (3*5) == 0 ? Parce que même 3*5, c'est au script de la calculer)
+        if (n % 3 == 0 && n % 5 == 0) { // SI la valeur de n est divisible par 15 sans avoir de reste (reste = 0)... (NOTE quelle formule correcte pour noter n % (3*5) == 0 ? Parce que même 3*5, c'est au script de la calculer)
             alltable.push("flizzbuzz, ");// alors on "pousse" la valeur texte FIZZBUZZ dans le tableau ALLTABLE et on quitte les IF pour retourner au FOR (parce que ça veut dire que ce IF a donner un TRUE), où on applique seulement son action n++. SINON (alors IF a donné un FALSE), on va voir la ligne de condition suivante:
         }
         else if (n % 3 == 0) { // SI la valeur n divisée par 3 a un reste équivalnt à 0, alors il est multiple de 3...
@@ -31,7 +31,7 @@
         }
     }
 
-    console.table(alltable); // affiche le resultat dans la console sou forme de tableau (cosole.log affiche une ligne de résultats)
+    console.table(alltable); // affiche le resultat dans la console sous forme de tableau (console.log affiche une ligne de résultats)
 
 
 
