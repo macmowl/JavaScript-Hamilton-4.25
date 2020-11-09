@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (function() {
-
     const people = [
         {
             firstname: "Bradford",
@@ -89,17 +88,28 @@
         },
     ];
 
-    btn = document.getElementById('run');
+    const btn = document.getElementById("run");
 
-    btn.addEventListener('click',()=>{
-        people.forEach((i)=>{
-            if(i.lastname === "Dupont" && i.firstname === "Jean"){
-                console.log(i.email);
-                console.log(people.indexOf(i));
+    btn.addEventListener("click", () => {
+        people.forEach((elt, index) => {
+            if (elt.lastname === "Dupont" && elt.firstname === "Jean") {
+                console.log(elt.email);
+                console.log(index);
             }
-            else{}
-
         });
-    });
 
+        console.log("---");
+
+        const person = people.find(
+            ({firstname, lastname}) =>
+                firstname === "Jean" && lastname === "Dupont",
+        );
+        const personIndex = people.findIndex(
+            ({firstname, lastname}) =>
+                firstname === "Jean" && lastname === "Dupont",
+        );
+
+        console.log(person.email);
+        console.log(personIndex);
+    });
 })();
