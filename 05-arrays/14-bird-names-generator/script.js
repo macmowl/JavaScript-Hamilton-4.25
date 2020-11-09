@@ -55,10 +55,10 @@
 
 
         if (birdFem == true) {
-            document.getElementById("target").innerHTML = birdName + " " + adjective + "e";
+            document.getElementById("target").innerHTML = "La " + birdName + " " + adjective + "e";
         }
         else {
-            document.getElementById("target").innerHTML = birdName + " " + adjective;
+            document.getElementById("target").innerHTML = "Le " + birdName + " " + adjective;
         }
 
     });
