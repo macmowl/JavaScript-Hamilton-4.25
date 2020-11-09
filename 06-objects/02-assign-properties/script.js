@@ -27,4 +27,17 @@
         user: null,
     };
     // your code here
+
+    document.getElementById("run").addEventListener("click", function(){
+        computers.forEach((computer) => {computer.user = computer.user || defaultProps.user;
+        })
+        computers.forEach((computer) => {computer.os = computer.os || defaultProps.os;
+        })
+        computers.forEach((computer) => { 
+            if (computer.available !== false){
+                computer.available = defaultProps.available
+            }
+        });        
+        console.table(computers);
+    });
 })();
