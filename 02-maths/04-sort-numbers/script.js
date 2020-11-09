@@ -10,16 +10,11 @@
 // You will have time to focus on it later.
 
 (function() {
-
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
-
-        // your code here
-        let numbers = [2, 4, 14, 10, 90, 23, 16]
-let sorted = numbers.sort((a,b)=>a-b)
-alert(sorted) 
-
+        let numbers = document.getElementById("numbers").value.split(", ");
+        let sorted = numbers.sort((a, b) => a - b);
+        alert(sorted);
     });
-
 })();
