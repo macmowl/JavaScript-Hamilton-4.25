@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    var fruits = [
+    const fruits = [
         "apple",
         "pear",
         "raspberry",
@@ -26,13 +25,11 @@
         "cherry",
     ];
     // your code here
-    document.getElementById("run").addEventListener ("click", function() {
+    document.getElementById("run").addEventListener("click", function() {
+        for (let product of fruits) {
+            //produit peut s'appeler de façon différente, par ex value
 
-        for(let produits of fruits){ //produit peut s'appeler de façon différente, par ex value
-
-            console.log(produits); //renvoie le nom de la valeur en cours à chaque boucle quand on actionne le bouton
+            console.log(product); //renvoie le nom de la valeur en cours à chaque boucle quand on actionne le bouton
         }
-
     });
-
 })();
