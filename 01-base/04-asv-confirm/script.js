@@ -9,8 +9,20 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function collectDatas() {
+    
+    let age=prompt("Enter your age");
+    let gender=prompt("Enter your gender");
+    let adress=prompt("Enter your locality");
+    let phrase=`Your are ${age} years old ${gender} and you live in ${adress}`;
+    let allRight = confirm(phrase);
+    console.log(allRight)
 
-    // your code here
+    if ( allRight === true) {
+    alert("Thanks for your participation");
+    }else{
+    collectDatas();
+    }
+    
 
 })();
