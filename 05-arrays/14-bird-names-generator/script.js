@@ -38,29 +38,18 @@
         "arboré",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        const randomBirds = Math.floor(Math.random() * birds.length);
+        const randomAdjectives = Math.floor(Math.random() * adjectives.size);
 
-    let button = document.getElementById("run");
-    button.addEventListener ("click", function () {
+        const birdName = birds[randomBirds].name;
+        const birdFem = birds[randomBirds].fem;
 
-        let randomBirds = Math.floor(Math.random() * birds.length);
-        let randomAdjectives = Math.floor(Math.random() * adjectives.size);
+        const adjectivesArray = [...adjectives];
+        const adjective = adjectivesArray[randomAdjectives];
 
-        let birdName = birds[randomBirds].name;
-        let birdFem = birds[randomBirds].fem;
-
-        let adjectivesArray = [...adjectives];
-        let adjective = adjectivesArray[randomAdjectives];
-
-
-
-        if (birdFem == true) {
-            document.getElementById("target").innerHTML = "La " + birdName + " " + adjective + "e";
-        }
-        else {
-            document.getElementById("target").innerHTML = "Le " + birdName + " " + adjective;
-        }
-
+        document.getElementById("target").innerHTML = `${
+            birdFem ? "La" : "Le"
+        } ${birdName} ${adjective}${birdFem ? "e" : ""}`;
     });
-
 })();
