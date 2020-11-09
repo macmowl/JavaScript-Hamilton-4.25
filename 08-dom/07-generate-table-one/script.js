@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+        let tableau = document.createElement("table");  //crée une table.
+        let row, data;                                  //crée les variables "row" et "data".
+
+        for (let i = 0; i < 10; i++) {                  //crée une boucle for pour créer 10 lignes.
+            row = document.createElement("tr");         //crée le html <tr>.
+            data = document.createElement("td");        //crée le html <td>.
+            data.innerText = "Bastien";                 //crée la chaine de caractère "Bastien".
+            row.appendChild(data);                      //pousse l'enfant "data" dans le parent "row".
+            tableau.appendChild(row);                   //pousse l'enfant "row" dans le parent "tableau".
+        }
+
+        document.getElementById("target").appendChild(tableau); //pousse l'enfant "tableau" dans le parent "target".
 
 })();
