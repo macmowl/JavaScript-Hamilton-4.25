@@ -9,22 +9,23 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function () {
+(function() {
     // my solution for exo 3-1
-  
-    red.addEventListener("click", function () {
-      document.body.style.background = "red";
+
+    document.getElementById("red").addEventListener("click", function() {
+        // change and keep the logo
+        document.querySelector("html").style.backgroundColor = "red";
     });
-  
-    green.addEventListener("click", function () {
-      document.body.style.background = "green";
+
+    document.getElementById("green").addEventListener("click", function() {
+        document.body.style.backgroundColor = "green";
     });
-  
-    yellow.addEventListener("click", function () {
-      document.body.style.background = "yellow";
+
+    document.getElementById("yellow").addEventListener("click", function() {
+        document.body.style.backgroundColor = "yellow";
     });
-  
-    blue.addEventListener("click", function () {
-      document.body.style.background = "blue";
+
+    document.getElementById("blue").addEventListener("click", function() {
+        document.body.style.backgroundColor = "blue";
     });
-  })();
+})();
