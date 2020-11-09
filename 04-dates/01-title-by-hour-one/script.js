@@ -10,21 +10,19 @@
 // You will have time to focus on it later.
 
 (function() {
-
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-    
+
     let ftime = new Date();
     let hours = ftime.getHours();
-    if (hours < 18)
-    {
+
+    // document.getElementById("target").innerHTML = hours < 18 ? "Hello" : "Good evening;
+    // Don't nest ternary operators!
+
+    if (hours < 18) {
         document.getElementById("target").innerHTML = "Hello";
-    }
-    else 
-    {
+    } else {
         document.getElementById("target").innerHTML = "Good evening";
     }
-
-
 })();
