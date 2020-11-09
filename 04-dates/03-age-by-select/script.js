@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (function() {
-
     document.getElementById('run').addEventListener( 'click', () => {
         let now = new Date();
         let inputDate = new Date(`
@@ -18,8 +17,8 @@
             ${document.getElementById('dob-day').value},
             ${document.getElementById('dob-year').value}
         `);
-        let birthday = Math.floor((now - inputDate) / 365 / 24 / 3600 / 1000) ;
-        alert(`You have ${birthday} years old.`);
+        let age = Math.floor((now - inputDate) / 365 / 24 / 3600 / 1000) ;
+        alert(`You have ${age} years old.`);
     })
 
 })();
