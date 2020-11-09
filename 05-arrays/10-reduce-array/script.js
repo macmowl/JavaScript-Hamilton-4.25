@@ -10,8 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    var people = [
+    const people = [
         {
             firstname: "Grenville",
             lastname: "Stive",
@@ -89,21 +88,12 @@
         },
     ];
 
-    
-    document.getElementById("run").addEventListener("click", function()
-    {
-        let result = [];
-        let initialValue = 0;
-        let reducer = (accumulator, item) =>
-        { return accumulator + item}
+    document.getElementById("run").addEventListener("click", function() {
+        const total = people.reduce(
+            (accumulator, {age}) => accumulator + age,
+            0,
+        );
 
-        people.forEach(item =>
-            {
-            result.push(item.age);  
-            })
-        
-        let total = result.reduce(reducer, initialValue);
         console.log(total);
-    })
-
+    });
 })();
