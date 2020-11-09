@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-    var people = [
+    const people = [
         {
             firstname: "Garald",
             lastname: "Freschi",
@@ -38,9 +38,9 @@
         },
     ];
 
-    document.getElementById("run").addEventListener ("click", function() {
-
+    document.getElementById("run").addEventListener("click", function() {
         people.forEach(nomObjet => console.log(nomObjet.firstname));
-        });
-        //Dans le tableau "people", pour chaque (.forEach) objet, crée une fonction nomObjet, qui retournera le firstname pour chaque.
+        // people.forEach(({firstname}) => console.log(firstname));
+    });
+    //Dans le tableau "people", pour chaque (.forEach) objet, crée une fonction nomObjet, qui retournera le firstname pour chaque.
 })();
