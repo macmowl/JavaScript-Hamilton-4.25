@@ -10,20 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
-    const Camelia = [
-        {
-            lastname: "Jarek",
-            firstname: "Camélia",
-            age: "25",
-            city: "Liège",
-            country: "Belgium",
-        }
-    ];
-    document.getElementById("run").addEventListener("click", function() {
-        
-        Camelia.forEach(function (item) {
-            console.log(item);
-        });
+    const camelia = {
+        lastname: "Jarek",
+        firstname: "Camélia",
+        age: "25",
+        city: "Liège",
+        country: "Belgium",
+    };
 
+    document.getElementById("run").addEventListener("click", function() {
+        console.log(camelia);
     });
 })();
