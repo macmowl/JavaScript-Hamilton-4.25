@@ -10,15 +10,16 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    const number = Math.ceil(Math.random()*100);
+    const number = Math.ceil(Math.random() * 100);
     let guesses = 0;
     let guess = prompt("Yo bro, what's the number ?");
 
-    while(number-guess){
+    while (number !== guess) {
         guesses++;
-        number>guess ? guess=prompt("Go higher Bro !") : guess=prompt("You're too high Bro !") ;
+        guess = prompt(
+            number > guess ? "Go higher Bro!" : "You're too high Bro!",
+        );
     }
 
-    alert(`In ${++guesses} guesses ? You're a champ, Bro !`)
+    alert(`In ${++guesses} guesses ? You're a champ, Bro !`);
 })();
