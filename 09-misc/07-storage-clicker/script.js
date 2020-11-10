@@ -10,13 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
+    const target = document.getElementById('target');
 
-    window.addEventListener( 'load', () => {
-        const target = document.getElementById('target');
-        target.innerText = localStorage.getItem('value') || 0;
-    })
-    
-    
+    target.innerText = localStorage.getItem('value') || 0;
+
     // on increment button click, add 1
     document.getElementById('increment').addEventListener( 'click', () => {
         ++target.innerText;
