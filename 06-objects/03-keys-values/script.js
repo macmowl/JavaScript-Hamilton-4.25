@@ -18,9 +18,9 @@
         city: "Liège",
         status: "married",
     };
-    let btn = document.getElementById('run');
-    btn.addEventListener('click',()=>{
-        console.log(Object.keys(person))
-        console.log(Object.values(person))
+
+    document.getElementById("run").addEventListener("click", () => {
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
     });
 })();
