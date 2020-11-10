@@ -10,14 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
+    const target = document.querySelector("#target");
+    const slider = document.querySelector("#slider");
 
-    // your code here
-  let target = document.querySelector('#target');
-  let slider = document.querySelector('#slider');
-
-    slider.addEventListener('input', ()=>{
-        
-      target.innerHTML = "0"+slider.value;
-    })
-
+    slider.addEventListener("input", () => {
+        target.innerHTML=`0${slider.value}`;
+    });
 })();
