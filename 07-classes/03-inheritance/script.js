@@ -14,24 +14,30 @@
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
+
     class Cat extends Animal {
-        static greeting = greeting;
+        // making the first class
         constructor(name) {
+            super(); // to call the main class animal
             this.name = name;
         }
     }
+    Cat.greeting = "Meow";
+
     class Dog extends Animal {
-        static greeting = greeting;
+        // making second class
         constructor(name) {
-            this.name = name
+            super(); // to call main class animal
+            this.name = name;
         }
     }
+    Dog.greeting = "Woof";
 
-    document.getElementById("run").addEventListener("click", function () {
-        
-        let dog = new Dog("dog");
-        let cat = new Cat("cat");
-        
-        console.log(cat.sayHello() + dog.sayHello());
-     });
+    document.getElementById("run").addEventListener("click", () => {
+        const cat1 = new Cat("Simba");
+        const dog1 = new Dog("Duke");
+
+        console.log(cat1.sayHello());
+        console.log(dog1.sayHello());
+    });
 })();
