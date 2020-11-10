@@ -10,18 +10,15 @@
 // You will have time to focus on it later.
 
 (function() {
-   
-    document.getElementById("run").addEventListener("click", function(){    
-        let x = document.getElementById("pass-one").value;
-        let y = document.getElementById("pass-two").value;
-        if (x != y){
-            document.getElementsByTagName("input")[0].style.borderColor = "red";
-            document.getElementsByTagName("input")[1].style.borderColor = "red";
-        }
-        else {
-            document.getElementsByTagName("input")[0].style.borderColor = "silver";
-            document.getElementsByTagName("input")[1].style.borderColor = "silver";
-        }
+    document.getElementById("run").addEventListener("click", function() {
+        const passwordOne = document.getElementById("pass-one").value;
+        const passwordTwo = document.getElementById("pass-two").value;
+        document
+            .querySelectorAll("input")
+            .forEach(
+                elt =>
+                    (elt.style.borderColor =
+                        passwordOne !== passwordTwo ? "red" : "silver"),
+            );
     });
-
 })();
