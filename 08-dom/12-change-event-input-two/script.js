@@ -10,59 +10,14 @@
 // You will have time to focus on it later.
 
 (function() {
+    const valide = document.getElementById("validity");
+    const myInput = document.getElementById("pass-one");
 
-    // your code here
+    myInput.addEventListener("keyup", () => {
+        const onlyDigits = myInput.value.replace(/[^0-9 ]/g, "");
+        const check2num = onlyDigits.length >= 2;
+        const checklong = myInput.value.length >= 8;
 
-/*
-    let mypwd 
-
-    var myInput = document.getElementById("psw");
-
-    document.getElementById(pass-one).addEventListener("onkeypress",
-    mypwd =  document.getElementById(pass-one),
-    console.log(mypwd.lenght)
-    )
-    
-    mypwd.onkeyup = function() {
-        document.getElementById("validity").node.innerText = '1234';
-      }
-*/
-
-
-let valide = document.getElementById("validity");
-let myInput = document.getElementById("pass-one");
-
-
-myInput.onkeyup = function() { 
-
-    let checklong = 0
-    let check2num = 0
-
-    let onlyDigits = myInput.value.replace(/[^0-9 ]/g, "");
-
-        if( onlyDigits.length >= 2 ) {
-            check2num = 1;
-        } 
-        else {
-            check2num = 0;
-        }
-
-
-        if(myInput.value.length >= 8) {
-            checklong = 1;
-
-        } else {
-            checklong = 0;
-        }
-
-
-        if (checklong == 1 && check2num == 1) {
-            valide.innerHTML = 'OK';
-        }
-        else {
-            valide.innerHTML = 'Not ok';
-        }
-    }
-
-
+        valide.innerHTML = checklong && check2num ? "OK" : "Not ok";
+    });
 })();
