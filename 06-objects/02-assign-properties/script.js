@@ -26,18 +26,31 @@
         os: "linux",
         user: null,
     };
-    // your code here
 
-    document.getElementById("run").addEventListener("click", function(){
-        computers.forEach((computer) => {computer.user = computer.user || defaultProps.user;
-        })
-        computers.forEach((computer) => {computer.os = computer.os || defaultProps.os;
-        })
-        computers.forEach((computer) => { 
-            if (computer.available !== false){
-                computer.available = defaultProps.available
+    document.getElementById("run").addEventListener("click", function() {
+        // method one: with loop
+        computers.forEach(computer => {
+            computer.user = computer.user || defaultProps.user;
+            computer.os = computer.os || defaultProps.os;
+            if (computer.available !== false) {
+                computer.available = defaultProps.available;
             }
-        });        
+        });
         console.table(computers);
+
+        // method two: spread
+        console.table(
+            computers.map(computer => ({
+                ...defaultProps,
+                ...computer,
+            })),
+        );
+
+        // method three: Object.assign
+        console.table(
+            computers.map(computer=>Object.assign(
+                {}, defaultProps, computer
+            ))
+        );
     });
 })();
