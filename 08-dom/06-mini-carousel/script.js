@@ -10,7 +10,6 @@
 // You will have time to focus on it later.
 
 (function() {
-
     let gallery = [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
@@ -19,26 +18,13 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
-
     let index = 0;
-    let parent = document.querySelector(".material");
-    let image = parent.getElementsByTagName("img")[0];
+    const image = document.querySelector("img");
 
-
-    document.getElementById("next").addEventListener("click", ()=>{
-
-        index++;
+    document.getElementById("next").addEventListener("click", () => {
+        if (++index === gallery.length){
+            index = 0;
+        }
         image.src = gallery[index];
-
-        if (index > gallery.length-2) {
-            index = -1;
-        }  else {
-        }   
-        
-        console.log(gallery);
-        console.log(typeof(gallery));
-        console.log(image.src);
-
-    })
+    });
 })();
