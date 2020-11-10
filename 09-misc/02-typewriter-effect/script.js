@@ -10,35 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+    const target = document.getElementById("target");
+    // recup la phrase & divise le texte pour séparé chaque lettre et crée un tableau
+    const text = target.innerText.split("");
 
- let i = 0
+    // replace le contenu de target par du "vide"
+    target.innerText = "";
 
+    const addcharacter = i => {
+        target.innerHTML += text[i];
 
- let speed = 50;
+        if (i < text.length) {
+            setTimeout(() => {
+                addcharacter(i+1);
+            }, Math.floor(Math.random() * 400 - 200) + 200);
+        }
+    };
 
- let txt = document.getElementById("target").value.length;
-
-
-
- function typeWriter() {
-
-    
-    if (i < txt){
-
-        
-        document.getElementById("target").innerHTML+=txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-
-        
-    }
- } 
-
- document.getElementById("target").innerHTML=" "
-
-typeWriter()
-
- 
-
-
+    addcharacter(0);
 })();
