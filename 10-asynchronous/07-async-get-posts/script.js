@@ -12,8 +12,12 @@
 (() => {
 
     async function posts() {
-        const posts = await window.lib.getPosts();
-        console.log(posts)
+        try {
+            const posts = await window.lib.getPosts();
+            console.log(posts)
+        } catch (error) {
+            alert(`Mmmmh, there is error`)
+        }
     }
 
     document.getElementById('run').addEventListener('click', () => {

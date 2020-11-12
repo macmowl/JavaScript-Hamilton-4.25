@@ -20,8 +20,6 @@
             template.querySelector('.powers').textContent = hero.abilities;
             target.appendChild(document.importNode(template, true));
         });
-        
-        
     }
     
     document.getElementById('run').addEventListener('click', () => {

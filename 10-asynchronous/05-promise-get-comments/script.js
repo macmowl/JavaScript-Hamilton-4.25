@@ -14,11 +14,12 @@
         window.lib.getPosts()
             .then(data => {
                 data.forEach(element => {
-                    console.log(element)
                     window.lib.getComments(element.id).then(data => {
-                        element.comments = data
+                        element.comments = data;
+                        console.log(element)
                     })
                 });
             })
+            .catch(error => console.log(`There is an error somewhere`, error))
     })
 })();

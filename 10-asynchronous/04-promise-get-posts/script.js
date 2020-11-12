@@ -11,8 +11,10 @@
 
 (() => {
     document.getElementById('run').addEventListener('click', () => {
-        window.lib.getPosts().then( data => {
+        window.lib.getPosts()
+        .then( data => {
             console.log(data)
         })
+        .catch(error => console.log('There is an error', error))
     })
 })();

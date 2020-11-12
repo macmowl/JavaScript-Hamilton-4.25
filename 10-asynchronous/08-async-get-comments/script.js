@@ -18,7 +18,6 @@
             posts.forEach(article => {
                 article.comments = comments[article.id];
                 console.log(article);
-                
             });
         }
         catch(err) {
