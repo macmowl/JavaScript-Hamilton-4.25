@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    
+    document.getElementById('run').addEventListener('click', () => {
+        fetch('http://localhost:3000/heroes')
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log(`An error occured : ${response.status}`)
+                }
+
+                response.json()
+                    .then(data => console.log(data))
+            })
+            .catch(err => console.log(err))
+    })
 })();

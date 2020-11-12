@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    async function posts() {
+        try {
+            const posts = await window.lib.getPosts();
+            const comments = await window.lib.getComments();
+            posts.forEach(article => {
+                article.comments = comments[article.id];
+                console.log(article);
+                
+            });
+        }
+        catch(err) {
+            console.log(err);
+        }
+        
+    }
+
+    document.getElementById('run').addEventListener('click', () => {
+        posts()
+    })
 })();
