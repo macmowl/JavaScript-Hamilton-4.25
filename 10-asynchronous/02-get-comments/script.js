@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById('run').addEventListener('click', () => {
+        window.lib.getPosts((error, resolve) => {
+            if (error) {
+                console.log(error)
+            } else {
+                console.log(resolve);
+                resolve.forEach(element => {
+                    window.lib.getComments(element.id, (error, res) => {
+                        if (error) {
+                            console.log(error)
+                        } else {
+                            element.comments = res;
+                            console.log(element);
+                        }
+                        
+                    });
+                });
+                
+            }
+        })
+    })
 })();
