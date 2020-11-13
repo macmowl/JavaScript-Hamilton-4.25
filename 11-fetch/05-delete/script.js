@@ -15,17 +15,22 @@
     heroId.setAttribute('type', 'number');
     
     deleteHero = id => {
-        fetch(`http://localhost:3000/heroes${id}`, {
+        if (confirm('Are you sure?')) {
+            fetch(`http://localhost:3000/heroes/${id}`, {
             method: 'DELETE'
         })
             .then(response => {
                 if (response.ok) {
                     response.json()
-                        .then(data => console.log(data))
+                        .then(data => {
+                            //data.splice(id -1, 1);
+                            alert("x-men supprimé")})
                 } else {
                     console.log(`An error occured : ${response.status}`)
                 }  
             })
+        }
+        
     }
 
     document.getElementById('run').addEventListener('click', () => {

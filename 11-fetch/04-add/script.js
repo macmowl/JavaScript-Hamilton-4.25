@@ -12,12 +12,13 @@
 (() => {
 
     let heroes = [];
+    const URL = 'http://localhost:3000/heroes';
     const name = document.getElementById('hero-name');
     const alter = document.getElementById('hero-alter-ego');
     const power = document.getElementById('hero-powers');
 
     fetchHero = () => {
-        fetch('http://localhost:3000/heroes')
+        fetch(URL)
             .then(response => {
                 if (response.status !== 200) {
                     console.log(`An error occured : ${response.status}`)
@@ -25,7 +26,8 @@
 
                 response.json()
                     .then(data => {
-                        this.heroes = data;
+                        heroes = data;
+                        console.log(heroes)
                     })
             })
             .catch(err => console.log(err))
@@ -34,14 +36,29 @@
     fetchHero();
 
     addHero = (name, alter, powers) => {
-        const abilities = powers.split(', ')
-        this.heroes.push({
-            id: this.heroes.length,
-            name: name,
-            alterEgo: alter,
-            abilities: abilities
-        })
-        console.log(this.heroes)
+        if (confirm(`Do you want to add ${name} alias ${alter} and these abilities :${powers}?`)) {
+            const lastHeroAdded = heroes[heroes.length-1]
+            heroes.push({
+                id: ++lastHeroAdded.id,
+                name: name,
+                alterEgo: alter,
+                abilities: powers.split(', ')
+            })
+
+            fetch(URL, {
+                method: 'POST',
+                body: JSON.stringify(lastHeroAdded),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            })
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log(`An error occured : ${response.status}`)
+                }
+            })
+        }
+        
     }
 
     document.getElementById('run').addEventListener('click', () => {

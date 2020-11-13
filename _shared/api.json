@@ -1,18 +1,6 @@
 {
   "heroes": [
     {
-      "id": 1,
-      "name": "Cyclops",
-      "alterEgo": "Scott Summers",
-      "abilities": ["Optic force blasts", "Master tactician"]
-    },
-    {
-      "id": 2,
-      "name": "Marvel Girl",
-      "alterEgo": "Jean Grey",
-      "abilities": ["Telekinesis", "Telepathy", "Astral projection"]
-    },
-    {
       "id": 3,
       "name": "Beast",
       "alterEgo": "Hank McCoy",
@@ -38,6 +26,64 @@
       "abilities": [
         "Cold and ice manipulation",
         "Ability to assume an enhanced physical form made of solid ice"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Batman",
+      "alterEgo": "Bruce Wayne",
+      "abilities": [
+        "Rich",
+        "Dark"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Professor Xavier",
+      "alterEgo": "Professor Xavier",
+      "abilities": [
+        "Can enter your mind and destroy it"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Wolverine",
+      "alterEgo": "Logan",
+      "abilities": [
+        "Auto-heal",
+        "Bones can get out of his hands"
+      ]
+    },
+    {
+      "id": "[object Object]1",
+      "name": "qsdf",
+      "alterEgo": "qsdf",
+      "abilities": [
+        "qsdf"
+      ]
+    },
+    {
+      "id": "[object Object]11",
+      "name": "qsdfqsdf",
+      "alterEgo": "qsdfqsdf",
+      "abilities": [
+        "qsdfqsfd"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "qsdf",
+      "alterEgo": "qsdf",
+      "abilities": [
+        "qsdf"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "qsdf",
+      "alterEgo": "qsdf",
+      "abilities": [
+        "qsdf"
       ]
     }
   ]
