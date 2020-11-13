@@ -10,5 +10,41 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    let heroes = [];
+    const name = document.getElementById('hero-name');
+    const alter = document.getElementById('hero-alter-ego');
+    const power = document.getElementById('hero-powers');
+
+    fetchHero = () => {
+        fetch('http://localhost:3000/heroes')
+            .then(response => {
+                if (response.status !== 200) {
+                    console.log(`An error occured : ${response.status}`)
+                }
+
+                response.json()
+                    .then(data => {
+                        this.heroes = data;
+                    })
+            })
+            .catch(err => console.log(err))
+    }
+
+    fetchHero();
+
+    addHero = (name, alter, powers) => {
+        const abilities = powers.split(', ')
+        this.heroes.push({
+            id: this.heroes.length,
+            name: name,
+            alterEgo: alter,
+            abilities: abilities
+        })
+        console.log(this.heroes)
+    }
+
+    document.getElementById('run').addEventListener('click', () => {
+        addHero(name.value, alter.value, power.value)
+    })
 })();

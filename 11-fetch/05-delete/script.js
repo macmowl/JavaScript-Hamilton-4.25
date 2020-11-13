@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    const heroId = document.getElementById('hero-id');
+    heroId.setAttribute('type', 'number');
+    
+    deleteHero = id => {
+        fetch(`http://localhost:3000/heroes${id}`, {
+            method: 'DELETE'
+        })
+            .then(response => {
+                if (response.ok) {
+                    response.json()
+                        .then(data => console.log(data))
+                } else {
+                    console.log(`An error occured : ${response.status}`)
+                }  
+            })
+    }
+
+    document.getElementById('run').addEventListener('click', () => {
+        deleteHero(heroId.value)
+    })
 })();
